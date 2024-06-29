@@ -11,7 +11,7 @@
         public string Password { get; set; }
         public string Birthday { get; set; }
         public string Gender { get; set; }
-        public string Address { get; set; }
+        public Address? Address { get; set; } // Nullable Address property
         public string Role { get; set; }
     }
 }

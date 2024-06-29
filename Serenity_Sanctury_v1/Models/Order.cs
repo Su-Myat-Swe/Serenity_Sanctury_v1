@@ -1,7 +1,10 @@
-﻿namespace Serenity_Sanctury_v1.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Serenity_Sanctury_v1.Models
 {
     public class Order
     {
+        [Key]
         public int OrderID { get; set; }
         public int CustomerID { get; set; }
         public string ShippingAddress { get; set; }

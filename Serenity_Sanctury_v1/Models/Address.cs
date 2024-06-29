@@ -6,10 +6,24 @@ namespace Serenity_Sanctury_v1.Models
     {
         [Key]
         public int ID { get; set; }
+
+        [Required]
+        [MaxLength(100)]
         public string Streetline { get; set; }
+
+        [Required]
+        [MaxLength(50)]
         public string UnitNumber { get; set; }
+
+        [Required]
+        [MaxLength(10)]
         public string PostalCode { get; set; }
+
+        [Required]
+        [MaxLength(50)]
         public string City { get; set; }
+    }
+}
 
     }
 }

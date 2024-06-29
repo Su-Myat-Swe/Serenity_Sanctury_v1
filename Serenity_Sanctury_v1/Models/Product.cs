@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Serenity_Sanctury_v1.Data.Enum; // Added this to use things in Enum folder
 
 namespace Serenity_Sanctury_v1.Models
 {

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Serenity_Sanctury_v1.Data.Enum; // Added this to use things in Enum folder
 
 namespace Serenity_Sanctury_v1.Models
 {
@@ -22,7 +23,7 @@ namespace Serenity_Sanctury_v1.Models
         public decimal TotalPrice { get; set; }
 
         [Required]
-        public OrderStatus Status { get; set; }
+        public OrderStatus OrderStatus { get; set; }
 
         // Navigation properties
         public User? User { get; set; }

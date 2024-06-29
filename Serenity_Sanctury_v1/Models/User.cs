@@ -34,9 +34,8 @@ namespace Serenity_Sanctury_v1.Models
         [MaxLength(100)]
         public string Password { get; set; }
 
-        [Required]
         [DataType(DataType.Date)]
-        public DateTime Birthday { get; set; }
+        public DateOnly? Birthday { get; set; }
 
         [Required]
         [MaxLength(10)]
@@ -45,7 +44,7 @@ namespace Serenity_Sanctury_v1.Models
         [ForeignKey("Address")]
         public int? AddressID { get; set; }
 
-        //public virtual Address Address { get; set; } // Nullable Address property
+        public Address? Address { get; set; } // Nullable Address property
 
         [Required]
         [MaxLength(50)]

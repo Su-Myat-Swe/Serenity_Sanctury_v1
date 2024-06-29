@@ -14,6 +14,8 @@ namespace Serenity_Sanctury_v1.Models
         [ForeignKey("Product")]
         public int ProductID { get; set; }
 
+        public ICollection<Product> Products { get; set; }
+
         [Required]
         public int Quantity { get; set; }
 

@@ -12,7 +12,7 @@ namespace Serenity_Sanctury_v1.Models
         public int CustomerID { get; set; }
 
         [ForeignKey("Address")]
-        public int ShippingAddressID { get; set; }
+        public int AddressID { get; set; }
 
         [Required]
         public DateTime OrderDate { get; set; }
@@ -26,15 +26,8 @@ namespace Serenity_Sanctury_v1.Models
 
         // Navigation properties
         public User? User { get; set; }
-        public Address? ShippingAddress { get; set; }
+        public Address? Address { get; set; }
 
-        // Define the Status enum within the Order class or separately
-        public enum OrderStatus
-        {
-            Pending,
-            Shipped,
-            Delivered,
-            Cancelled
-        }
+
     }
 }

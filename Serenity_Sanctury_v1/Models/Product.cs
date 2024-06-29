@@ -12,7 +12,7 @@ namespace Serenity_Sanctury_v1.Models
         public string ProductName { get; set; }
 
         [Required]
-        public string Category { get; set; }
+        public Category Category { get; set; }
 
         public string Description { get; set; }
 

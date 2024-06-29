@@ -34,7 +34,7 @@ namespace Serenity_Sanctury_v1.Data
                     Category = Category.Candles,
                     Description = "A soothing candle for relaxation.",
                     Color = "Black",
-                    Price = 10.00aud,
+                    Price = 10.00m,
                     Quantity = 100,
                     ImageUrl = "candle.jpg"
                 },
@@ -45,7 +45,7 @@ namespace Serenity_Sanctury_v1.Data
                     Category = Category.EssentialOil,
                     Description = "Pure lavender essential oil.",
                     Color = "Clear",
-                    Price = 15.00aud,
+                    Price = 15.00m,
                     Quantity = 200,
                     ImageUrl = "lavender_oil.jpg"
                 }
@@ -62,7 +62,7 @@ namespace Serenity_Sanctury_v1.Data
                     PhoneNo = null,
                     Email = "customer@example.com",
                     Password = "Password1",
-                    Birthday = "12/02/1998",
+                    Birthday = new DateTime(1998, 12, 2),
                     Gender = "Male",
                     Role = "Customer"
                 }
@@ -119,7 +119,7 @@ namespace Serenity_Sanctury_v1.Data
                     CustomerID = 1,
                     AddressID = 1,
                     OrderDate = DateTime.Now,
-                    TotalPrice = 35.98aud,
+                    TotalPrice = 35.98m,
                     OrderStatus = OrderStatus.Pending
                 }
             );
@@ -133,7 +133,7 @@ namespace Serenity_Sanctury_v1.Data
                     OrderEmail = "customer@example.com",
                     PostalCode = "2308",
                     StatusUpdate = "Order placed",
-                    UpdateTime = DateTime.Now
+                    UpdateTime = DateTime.UtcNow
                 }
             );
 

@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Serenity_Sanctury_v1.Data.Enum; // Added this to use things in Enum folder
+using Serenity_Sanctury_v1.Data.Enum; // Ensure Enum namespace is correctly referenced
 
 namespace Serenity_Sanctury_v1.Models
 {
@@ -28,7 +29,5 @@ namespace Serenity_Sanctury_v1.Models
         // Navigation properties
         public User? User { get; set; }
         public Address? Address { get; set; }
-
-
     }
 }

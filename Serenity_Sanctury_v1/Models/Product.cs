@@ -7,7 +7,7 @@ namespace Serenity_Sanctury_v1.Models
     public class Product
     {
         [Key]
-        public int ProductId { get; set; }
+        public int ProductID { get; set; }
 
         [Required]
         public string ProductName { get; set; }

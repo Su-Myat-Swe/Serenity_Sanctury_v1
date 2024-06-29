@@ -62,7 +62,7 @@ namespace Serenity_Sanctury_v1.Data
                     PhoneNo = null,
                     Email = "customer@example.com",
                     Password = "Password1",
-                    Birthday = new DateTime(1998, 12, 2),
+                    Birthday = new DateOnly(1998, 12, 2),
                     Gender = "Male",
                     Role = "Customer"
                 }
@@ -76,6 +76,7 @@ namespace Serenity_Sanctury_v1.Data
                     LastName = "Istrator",
                     FirstName = "Admin",
                     FullName = "Admin Istrator",
+                    PhoneNo = null,
                     Email = "administrator@example.com",
                     Password = "Pa$$w0rd",
                     Address = null
@@ -89,6 +90,7 @@ namespace Serenity_Sanctury_v1.Data
                     LastName = "Oyee",
                     FirstName = "Empl",
                     FullName = "Empl Oyee",
+                    PhoneNo= null,
                     Email = "employee@example.com",
                     Password = "Passw0rd",
                     Birthday = null,

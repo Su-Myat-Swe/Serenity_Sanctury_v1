@@ -20,9 +20,8 @@ namespace Serenity_Sanctury_v1.Models
         [MaxLength(100)]
         public string FullName { get; set; }
 
-        [Required]
         [MaxLength(15)]
-        public string PhoneNo { get; set; }
+        public string? PhoneNo { get; set; }
 
         [Required]
         [EmailAddress]

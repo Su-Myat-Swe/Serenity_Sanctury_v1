@@ -16,7 +16,7 @@ namespace Serenity_Sanctury_v1.Models
 
         public string FullName { get; set; }
 
-        public string PhoneNo { get; set; }
+        public string? PhoneNo { get; set; }
 
         [Required]
         [EmailAddress]

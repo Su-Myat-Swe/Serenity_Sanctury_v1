@@ -8,22 +8,40 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Serenity_Sanctury_v1.styles.css" asp-append-version="true" />
 </head>
+
+<!--Adding some style properties with inline CSS in body-->
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Serenity_Sanctury_v1</a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex align-items-center">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> 
+                    <img src="~/Image/SLogo.png" alt="logo" style="height: 70px; width: 70px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1 d-flex align-items-centern">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                        </li>
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link text-light" style="font-size:12px; text-align: center" asp-area="" asp-controller="Home" asp-action="Profile">
+                                <img src="~/Image/profile1.png" alt="Profile" style="height: 35px; width: 35px;"><br>Login/ Signup
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Cart">
+                                <img src="~/Image/cart1.png" alt="Cart" style="height: 45px; width: 45px;"></a>
                         </li>
                     </ul>
                 </div>
@@ -36,11 +54,14 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Serenity_Sanctury_v1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-3 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                 &copy; 2024 - Serenity_Sanctury_v1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -17,6 +17,10 @@ namespace Serenity_Sanctury_v1.Controllers
         {
             return View();
         }
+        public IActionResult Products()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

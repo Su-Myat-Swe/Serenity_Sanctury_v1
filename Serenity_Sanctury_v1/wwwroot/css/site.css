@@ -17,6 +17,126 @@ html {
   min-height: 100%;
 }
 
+/*Change the style properties of every page's body*/
 body {
-  margin-bottom: 60px;
+    /* Adds 50px of space below the body content */
+    margin-bottom: 20px;
+    background-color: #FFF6E9; /*yellowish paper color*/
+    color: #7776B3; /*lavender color*/
 }
+
+.context{
+    margin-top:25px;
+    font-family:'Microsoft Sans Serif';
+}
+
+
+/* Change the some style properties of the navbar */
+.navbar {
+    background-color: #9B86BD;
+    height: 55px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*Changing some style properties of other pages in navigation bar*/
+.nav-item {
+    display: flex;
+    align-items: center;
+    
+}
+
+/*Adjusting the margin of Logo in nav bar*/
+.navbar-brand img {
+    margin-left:20px;
+    
+}
+
+/*Adjusting the positions of the image in nav bar*/
+.nav-item img {
+    align-items: center;
+}
+
+.nav-link{
+    /*Changing font size of the words in navigation bar*/
+    font-size:17px;
+    margin-right:20px;
+    
+
+}
+
+.nav-item .active {
+    color: #9B86BD;
+    background-color: white;
+    border-radius: 50px;
+    width: 85px;
+    height: auto;
+    text-align:center;
+}
+
+/*.navbar-nav > .active > .a {
+    color: red;
+}*/
+
+/*Style properties of Image in Home Page
+.producthome {
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+
+.para {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 14px;
+    font-weight: bold;
+}*/
+
+
+/*Style properties of Image in Home Page*/
+.product-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.producthome {
+    width: 650px;
+    height: 350px;
+}
+
+.para {
+    text-align: center;
+    margin-top: -60px;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #9B86BD;
+    font-family: Georgia;
+    color: white;
+    text-align:center;
+    height:42px;
+    width:100px;
+    border-color: white;
+    transition: .4s all;
+    border-radius: 5px;
+    margin-left: 500px;
+    margin-top: -170px;
+    ;
+}
+
+    .btn:hover {
+        transform: scale(1.2);
+        color: white;
+        border-color: yellow;
+    }
+
+
+/*footer {
+    margin-top: auto;
+}*/
+
+

@@ -21,26 +21,26 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1 d-flex align-items-centern">
+                    <ul class="navbar-nav flex-grow-1 d-flex align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Products">Products</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Products">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
                         </li>
                         <li class="nav-item ms-auto">
-                            <a class="nav-link text-light" style="font-size:12px; text-align: center" asp-area="" asp-controller="Home" asp-action="Profile">
+                            <a class="nav-link" style="font-size:12px; text-align: center" asp-area="" asp-controller="Home" asp-action="Profile">
                                 <img src="~/Image/profile1.png" alt="Profile" style="height: 35px; width: 35px;"><br>Login/ Signup
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Cart">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Cart">
                                 <img src="~/Image/cart1.png" alt="Cart" style="height: 45px; width: 45px;"></a>
                         </li>
                     </ul>
@@ -65,6 +65,24 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Add active class to the current page's link
+            var currentPageUrl = window.location.pathname.toLowerCase(); // Get current page URL
+            $(".navbar-nav a.nav-link").each(function () {
+                var linkUrl = $(this).attr("href").toLowerCase(); // Get link URL
+                if (currentPageUrl === linkUrl) {
+                    $(this).addClass("active"); // Add active class to the matching link
+                }
+            });
+
+            // Toggle active class on click
+            $(".navbar-nav a.nav-link").click(function () {
+                $(".navbar-nav a.nav-link").removeClass("active"); // Remove active class from all links
+                $(this).addClass("active"); // Add active class to the clicked link
+            });
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

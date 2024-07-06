@@ -60,10 +60,33 @@ body {
     /*Changing font size of the words in navigation bar*/
     font-size:17px;
     margin-right:20px;
+    color:white;
     
 
 }
 
+.navbar-nav .nav-link:hover {
+    color: black; /* or specify your desired hover color */
+    text-decoration: none; /* removes underline if present */
+}
+
+.navbar-nav a.nav-link {
+    border-radius: 50px;
+    width: 90px;
+    height: auto;
+    text-align: center;
+}
+
+.active {
+    background-color: white; /* Your desired background color */
+    color: #9B86BD; /* Text color for active link */
+    /* Add any other styles as needed */
+    border-radius: 50px;
+    width: 90px;
+    height: auto;
+    text-align: center;
+}
+/*
 .nav-item .active {
     color: #9B86BD;
     background-color: white;
@@ -71,7 +94,7 @@ body {
     width: 85px;
     height: auto;
     text-align:center;
-}
+}*/
 
 /*.navbar-nav > .active > .a {
     color: red;
@@ -103,8 +126,8 @@ body {
 
 
 .producthome {
-    width: 650px;
-    height: 350px;
+    width: 700px;
+    height: auto;
 }
 
 .para {
@@ -113,26 +136,55 @@ body {
     font-size: 16px;
 }
 
-.btn {
+/*Style properties for Shop Now btn in Index Page*/
+.btn-first {
     background-color: #9B86BD;
     font-family: Georgia;
     color: white;
     text-align:center;
-    height:42px;
-    width:100px;
     border-color: white;
     transition: .4s all;
     border-radius: 5px;
-    margin-left: 500px;
-    margin-top: -170px;
+    margin-left: 700px;
+    margin-top: -150px;
+    width:200px;
     ;
 }
 
-    .btn:hover {
-        transform: scale(1.2);
-        color: white;
-        border-color: yellow;
-    }
+ /*Style properties for Shop Now btn in Index Page*/
+.btn-first:hover {
+    transform: scale(1.2);
+    color: white;
+    border-color: white;
+}
+
+/*Style properties of box shadow in Products Page*/
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/*Style properties of buttons in Products Page*/
+.btn1 {
+    background-color: #9B86BD;
+    font-family: Georgia;
+    color: white;
+    text-align: center;
+    display: block; /* Center the text horizontally */
+    margin: 0 auto;
+    width: 300px;
+    border-color:white;
+}
+
+.card-text{
+    font-weight:300;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Style properties for the button container 
+.btn-group {
+    text-align: center; /* Center the button 
+    margin-top: 10px; /* Add space above the button 
+}*/
 
 
 /*footer {

@@ -35,12 +35,13 @@ body {
 .navbar {
     background-color: #9B86BD;
     height: 55px;
+    width: 100vw;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 /*Changing some style properties of other pages in navigation bar*/
 .nav-item {
-    display: flex;
+    display: grid;
     align-items: center;
     
 }
@@ -65,26 +66,21 @@ body {
 
 }
 
+
 .navbar-nav .nav-link:hover {
-    color: black; /* or specify your desired hover color */
+    color: inherit; /* or specify your desired hover color */
     text-decoration: none; /* removes underline if present */
 }
 
+/*Style properties of nav link in nav bar*/
 .navbar-nav a.nav-link {
     border-radius: 50px;
-    width: 90px;
-    height: auto;
-    text-align: center;
 }
 
+/*Style properties of active Page in Navigation bar*/
 .active {
-    background-color: white; /* Your desired background color */
+    background-color: white; /* background color behind active link */
     color: #9B86BD; /* Text color for active link */
-    /* Add any other styles as needed */
-    border-radius: 50px;
-    width: 90px;
-    height: auto;
-    text-align: center;
 }
 /*
 .nav-item .active {
@@ -165,20 +161,80 @@ body {
 
 /*Style properties of buttons in Products Page*/
 .btn1 {
-    background-color: #9B86BD;
     font-family: Georgia;
-    color: white;
     text-align: center;
-    display: block; /* Center the text horizontally */
-    margin: 0 auto;
-    width: 300px;
-    border-color:white;
-}
+    height:auto;
+    width: 100px;
 
+}
+/*
 .card-text{
     font-weight:300;
     font-family:Arial, Helvetica, sans-serif;
+}*/
+
+.container .card .card-body .card-text {
+    font-size: 1rem;
 }
+
+.container .card .card-body h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.container .card .card-body .product-old-price {
+    position: relative;
+    padding: 0 9px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+ .container .card .card-body .product-old-price::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #444444;
+        transform: translateY(-50%);
+}
+
+.colors {
+    display: flex;
+    margin-top: 2px;
+}
+
+.colors span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    margin-right: 6px;
+}
+
+.colors span:nth-child(1) {
+     background-color: red;
+}
+
+.colors span:nth-child(2) {
+     background-color: blue;
+}
+
+.colors span:nth-child(3) {
+     background-color: yellow;
+
+}
+
+.colors span:nth-child(4) {
+     background-color: purple;
+}
+
+.product-price {
+    margin-left: auto; /* Ensures the price is pushed to the right */
+}
+
 
 /* Style properties for the button container 
 .btn-group {

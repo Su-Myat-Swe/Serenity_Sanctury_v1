@@ -12,7 +12,7 @@ using Serenity_Sanctury_v1.Data;
 namespace Serenity_Sanctury_v1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240629170320_Initial")]
+    [Migration("20240726050827_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -163,7 +163,7 @@ namespace Serenity_Sanctury_v1.Migrations
                             OrderID = 1,
                             AddressID = 1,
                             CustomerID = 1,
-                            OrderDate = new DateTime(2024, 6, 30, 1, 3, 19, 738, DateTimeKind.Local).AddTicks(3853),
+                            OrderDate = new DateTime(2024, 7, 26, 13, 8, 26, 414, DateTimeKind.Local).AddTicks(6878),
                             OrderStatus = 0,
                             TotalPrice = 35.98m
                         });
@@ -210,7 +210,7 @@ namespace Serenity_Sanctury_v1.Migrations
                             OrderID = 1,
                             PostalCode = "2308",
                             StatusUpdate = "Order placed",
-                            UpdateTime = new DateTime(2024, 6, 29, 17, 3, 19, 738, DateTimeKind.Utc).AddTicks(3897)
+                            UpdateTime = new DateTime(2024, 7, 26, 5, 8, 26, 414, DateTimeKind.Utc).AddTicks(6920)
                         });
                 });
 
@@ -222,16 +222,25 @@ namespace Serenity_Sanctury_v1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductID"));
 
+                    b.Property<string>("BurnTime")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<int>("Category")
                         .HasColumnType("int");
 
-                    b.Property<string>("Color")
+                    b.Property<string>("Container")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<decimal?>("DiscountedPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
@@ -242,10 +251,19 @@ namespace Serenity_Sanctury_v1.Migrations
 
                     b.Property<string>("ProductName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
+
+                    b.Property<string>("Scent")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Size")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("ProductID");
 
@@ -255,24 +273,165 @@ namespace Serenity_Sanctury_v1.Migrations
                         new
                         {
                             ProductID = 1,
+                            BurnTime = "48 hours",
                             Category = 0,
-                            Color = "Black",
+                            Container = "Black color Glass Jar",
                             Description = "A soothing candle for relaxation.",
-                            ImageUrl = "candle.jpg",
+                            ImageUrl = "~/Image/product2.jpeg",
                             Price = 10.00m,
-                            ProductName = "Aromatherapy Candle",
-                            Quantity = 100
+                            ProductName = "Honeyed Harmony",
+                            Quantity = 100,
+                            Scent = "Honey and Vanilla",
+                            Size = "8 oz"
                         },
                         new
                         {
                             ProductID = 2,
+                            BurnTime = "40 hours",
+                            Category = 0,
+                            Container = "Transparent Glass Jar",
+                            Description = "A tranquil candle with a refreshing floral scent, perfect for creating a peaceful atmosphere.",
+                            ImageUrl = "~/Image/product3.jpeg",
+                            Price = 12.99m,
+                            ProductName = "Serenity Blossom",
+                            Quantity = 150,
+                            Scent = "Cherry Blossom",
+                            Size = "10 oz"
+                        },
+                        new
+                        {
+                            ProductID = 3,
                             Category = 1,
-                            Color = "Clear",
-                            Description = "Pure lavender essential oil.",
-                            ImageUrl = "lavender_oil.jpg",
-                            Price = 15.00m,
-                            ProductName = "Lavender Essential Oil",
-                            Quantity = 200
+                            Container = "Black Glass Bottle",
+                            Description = "Premium sandalwood essential oil for a calming and aromatic experience.",
+                            ImageUrl = "~/Image/product4.jpeg",
+                            Price = 9.99m,
+                            ProductName = "Soothing Sandalwood Essence",
+                            Quantity = 120,
+                            Scent = "Sandalwood",
+                            Size = "30 ml"
+                        },
+                        new
+                        {
+                            ProductID = 4,
+                            Category = 1,
+                            Container = "Black Glass Bottle",
+                            Description = "Pure tea tree essential oil known for its refreshing and invigorating properties.",
+                            ImageUrl = "~/Image/product4.jpeg",
+                            Price = 9.99m,
+                            ProductName = "Invigorating Tea Tree",
+                            Quantity = 150,
+                            Scent = "Tea Tree",
+                            Size = "30 ml"
+                        },
+                        new
+                        {
+                            ProductID = 5,
+                            BurnTime = "50 hours",
+                            Category = 0,
+                            Container = "Black Glass Jar",
+                            Description = "A soothing candle that brings a sense of calm and tranquility, perfect for your twilight hours.",
+                            ImageUrl = "~/Image/product2.jpeg",
+                            Price = 10.99m,
+                            ProductName = "Tranquil Twilight",
+                            Quantity = 100,
+                            Scent = "Lavender and Chamomile",
+                            Size = "12 oz"
+                        },
+                        new
+                        {
+                            ProductID = 6,
+                            BurnTime = "40 hours",
+                            Category = 0,
+                            Container = "Transparent Glass Jar",
+                            Description = "A calming candle infused with the soothing scent of lavender, perfect for creating a relaxing ambiance.",
+                            ImageUrl = "~/Image/product3.jpeg",
+                            Price = 12.99m,
+                            ProductName = "Lavender Dreams",
+                            Quantity = 75,
+                            Scent = "Lavender",
+                            Size = "8 oz"
+                        },
+                        new
+                        {
+                            ProductID = 7,
+                            BurnTime = "45 hours",
+                            Category = 0,
+                            Container = "Transparent Glass Jar",
+                            Description = "A luxurious candle with the delicate and romantic scent of rose petals, ideal for creating a serene atmosphere.",
+                            ImageUrl = "~/Image/product3.jpeg",
+                            Price = 12.99m,
+                            ProductName = "Rose Petal Oasis",
+                            Quantity = 80,
+                            Scent = "Rose Petals",
+                            Size = "8 oz"
+                        },
+                        new
+                        {
+                            ProductID = 8,
+                            BurnTime = "40 hours",
+                            Category = 0,
+                            Container = "Black Glass Jar",
+                            Description = "A vibrant candle with an invigorating citrus scent that brightens up any room and lifts your spirits.",
+                            ImageUrl = "~/Image/product2.jpeg",
+                            Price = 10.99m,
+                            ProductName = "Citrus Sunrise",
+                            Quantity = 90,
+                            Scent = "Citrus Blend",
+                            Size = "8 oz"
+                        },
+                        new
+                        {
+                            ProductID = 9,
+                            Category = 1,
+                            Container = "Black Glass Bottle",
+                            Description = "A refreshing essential oil with a zesty lemongrass scent, perfect for revitalizing your senses and uplifting your mood.",
+                            ImageUrl = "~/Image/product4.jpeg",
+                            Price = 12.99m,
+                            ProductName = "Lemongrass Harmony",
+                            Quantity = 100,
+                            Scent = "Lemongrass",
+                            Size = "30 ml"
+                        },
+                        new
+                        {
+                            ProductID = 10,
+                            BurnTime = "40 hours",
+                            Category = 0,
+                            Container = "Black Glass Jar",
+                            Description = "A delightful candle that combines the sweet and tangy aromas of mixed berries, creating a blissful and uplifting atmosphere.",
+                            ImageUrl = "~/Image/product2.jpeg",
+                            Price = 12.99m,
+                            ProductName = "Berry Bliss",
+                            Quantity = 120,
+                            Scent = "Berry Blend",
+                            Size = "8 oz"
+                        },
+                        new
+                        {
+                            ProductID = 11,
+                            BurnTime = "45 hours",
+                            Category = 0,
+                            Container = "Transparent Glass Jar",
+                            Description = "A luxurious candle that envelops you in the rich and creamy aroma of vanilla, creating a cozy and relaxing ambiance.",
+                            ImageUrl = "~/Image/product3.jpeg",
+                            Price = 10.99m,
+                            ProductName = "Vanilla Velvet",
+                            Quantity = 150,
+                            Scent = "Vanilla",
+                            Size = "8 oz"
+                        },
+                        new
+                        {
+                            ProductID = 12,
+                            Category = 2,
+                            Container = "Classic Ceramic",
+                            Description = "Enhance your home with the Classic Design Aroma Diffuser.This stylish diffuser adds a calming touch to any room with soothing essential oil scents and a gentle mist.Ideal for creating a relaxing atmosphere and  a touch of elegance.",
+                            DiscountedPrice = 49.99m,
+                            ImageUrl = "~/Image/product5.jpeg",
+                            Price = 79.99m,
+                            ProductName = "Classic Design Aroma Diffuser",
+                            Quantity = 50
                         });
                 });
 

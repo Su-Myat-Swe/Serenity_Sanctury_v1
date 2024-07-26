@@ -3,6 +3,7 @@
     public enum Category
     {
         Candles,
-        EssentialOil
+        EssentialOil,
+        AromaDiffuser
     }
 }

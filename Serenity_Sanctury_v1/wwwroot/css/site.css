@@ -165,7 +165,26 @@ body {
     text-align: center;
     height:auto;
     width: 100px;
+    
 
+}
+
+.btn2 {
+    font-family: Georgia;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    background-color: #9B86BD;
+    border-color: transparent;
+    color: white;
+    transition: .4s all;
+}
+
+/*Style properties for buttons in Product Details*/
+.btn2:hover {
+    transform: scale(1.2);
+    color: white;
+    border-color: white;
 }
 /*
 .card-text{
@@ -234,6 +253,18 @@ body {
 .product-price {
     margin-left: auto; /* Ensures the price is pushed to the right */
 }
+
+/*Adjusting size of image in Product Details*/
+.image-fluid {
+    width: 400px;
+    height: 350px;
+}
+
+.img-fluid {
+    width: 250px;
+    height: 180px;
+}
+
 
 
 /* Style properties for the button container 

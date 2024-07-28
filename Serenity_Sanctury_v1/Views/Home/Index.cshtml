@@ -2,11 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome from Our Candle Store</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+<section class="jumbotron text-center">
+    <div class="context">
+        <h1 class="jumbotron-heading">Welcome to Serenity Sanctuary!</h1>
+        <p class="lead text-muted">
+            Discover a haven of peace and tranquility with our wide range of candles,<br>
+            crafted to bring serenity to your home.
+        </p>
 
-
-
-    <a asp-area="" asp-controller="Admin" asp-action="ManageProducts" >Click this link for manage products</a>
-</div>
+            <hr class="my-4">
+            <div class="product-container">
+                <img class="producthome" src="~/Image/product.jpeg" alt="Candle Image">
+                <p class="para">At Serenity Sanctuary, we believe in the transformative power of fragrance and light. Each of our candles is meticulously hand-poured using the finest natural ingredients, ensuring a clean burn and a delightful scent that lingers. Whether you seek tranquility, inspiration, or a touch of luxury, our diverse collection caters to every mood and occasion. Discover the perfect blend of elegance and comfort with our unique fragrances, and let Serenity Sanctuary illuminate your moments with warmth and serenity. Explore our range today and bring a touch of enchantment into your home.</p>
+            </div>
+            <a class="btn btn-lg btn-first" asp-area="" asp-controller="Products" asp-action="Index" role="button">Shop Now</a>
+            <br /><a asp-area="" asp-controller="Admin"  asp-action="ManageProducts">Click this link for manage products</a>
+    </div>
+</section>
+</body>

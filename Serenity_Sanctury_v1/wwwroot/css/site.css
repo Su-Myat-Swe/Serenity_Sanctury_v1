@@ -17,6 +17,265 @@ html {
   min-height: 100%;
 }
 
+/*Change the style properties of every page's body*/
 body {
-  margin-bottom: 60px;
+    /* Adds 50px of space below the body content */
+    margin-bottom: 20px;
+    background-color: #FFF6E9; /*yellowish paper color*/
+    color: #7776B3; /*lavender color*/
 }
+
+.context{
+    margin-top:25px;
+    font-family:'Microsoft Sans Serif';
+}
+
+
+/* Change the some style properties of the navbar */
+.navbar {
+    background-color: #9B86BD;
+    height: 55px;
+    width: 100vw;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*Changing some style properties of other pages in navigation bar*/
+.nav-item {
+    display: grid;
+    align-items: center;
+    
+}
+
+/*Adjusting the margin of Logo in nav bar*/
+.navbar-brand img {
+    margin-left:20px;
+    
+}
+
+/*Adjusting the positions of the image in nav bar*/
+.nav-item img {
+    align-items: center;
+}
+
+.nav-link{
+    /*Changing font size of the words in navigation bar*/
+    font-size:17px;
+    margin-right:20px;
+    color:white;
+    
+
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: inherit; /* or specify your desired hover color */
+    text-decoration: none; /* removes underline if present */
+}
+
+/*Style properties of nav link in nav bar*/
+.navbar-nav a.nav-link {
+    border-radius: 50px;
+}
+
+/*Style properties of active Page in Navigation bar*/
+.active {
+    background-color: white; /* background color behind active link */
+    color: #9B86BD; /* Text color for active link */
+}
+/*
+.nav-item .active {
+    color: #9B86BD;
+    background-color: white;
+    border-radius: 50px;
+    width: 85px;
+    height: auto;
+    text-align:center;
+}*/
+
+/*.navbar-nav > .active > .a {
+    color: red;
+}*/
+
+/*Style properties of Image in Home Page
+.producthome {
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+
+.para {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 14px;
+    font-weight: bold;
+}*/
+
+
+/*Style properties of Image in Home Page*/
+.product-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.producthome {
+    width: 700px;
+    height: auto;
+}
+
+.para {
+    text-align: center;
+    margin-top: -60px;
+    font-size: 16px;
+}
+
+/*Style properties for Shop Now btn in Index Page*/
+.btn-first {
+    background-color: #9B86BD;
+    font-family: Georgia;
+    color: white;
+    text-align:center;
+    border-color: white;
+    transition: .4s all;
+    border-radius: 5px;
+    margin-left: 700px;
+    margin-top: -150px;
+    width:200px;
+    ;
+}
+
+ /*Style properties for Shop Now btn in Index Page*/
+.btn-first:hover {
+    transform: scale(1.2);
+    color: white;
+    border-color: white;
+}
+
+/*Style properties of box shadow in Products Page*/
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/*Style properties of buttons in Products Page*/
+.btn1 {
+    font-family: Georgia;
+    text-align: center;
+    height:auto;
+    width: 100px;
+    
+
+}
+
+.btn2 {
+    font-family: Georgia;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    background-color: #9B86BD;
+    border-color: transparent;
+    color: white;
+    transition: .4s all;
+}
+
+/*Style properties for buttons in Product Details*/
+.btn2:hover {
+    transform: scale(1.2);
+    color: white;
+    border-color: white;
+}
+/*
+.card-text{
+    font-weight:300;
+    font-family:Arial, Helvetica, sans-serif;
+}*/
+
+.container .card .card-body .card-text {
+    font-size: 1rem;
+}
+
+.container .card .card-body h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.container .card .card-body .product-old-price {
+    position: relative;
+    padding: 0 9px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+ .container .card .card-body .product-old-price::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #444444;
+        transform: translateY(-50%);
+}
+
+.colors {
+    display: flex;
+    margin-top: 2px;
+}
+
+.colors span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    margin-right: 6px;
+}
+
+.colors span:nth-child(1) {
+     background-color: red;
+}
+
+.colors span:nth-child(2) {
+     background-color: blue;
+}
+
+.colors span:nth-child(3) {
+     background-color: yellow;
+
+}
+
+.colors span:nth-child(4) {
+     background-color: purple;
+}
+
+.product-price {
+    margin-left: auto; /* Ensures the price is pushed to the right */
+}
+
+/*Adjusting size of image in Product Details*/
+.image-fluid {
+    width: 400px;
+    height: 350px;
+}
+
+.img-fluid {
+    width: 250px;
+    height: 180px;
+}
+
+
+
+/* Style properties for the button container 
+.btn-group {
+    text-align: center; /* Center the button 
+    margin-top: 10px; /* Add space above the button 
+}*/
+
+
+/*footer {
+    margin-top: auto;
+}*/
+
+

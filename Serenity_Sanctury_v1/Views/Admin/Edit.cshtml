@@ -40,9 +40,21 @@
     </div>
 
     <div class="form-group">
+        <label asp-for="Scent">Scent</label>
+        <input asp-for="Scent" class="form-control">
+        <span asp-validation-for="Scent" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
         <label asp-for="Container">Container</label>
         <input asp-for="Container" class="form-control">
         <span asp-validation-for="Container" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Size">Size</label>
+        <input asp-for="Size" class="form-control">
+        <span asp-validation-for="Size" class="text-danger"></span>
     </div>
 
     <div class="form-group">
@@ -58,13 +70,18 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="ImageUrl">Image URL</label>
+        <label asp-for="ImageUrl">ImageURL</label>
         <input asp-for="ImageUrl" class="form-control">
         <span asp-validation-for="ImageUrl" class="text-danger"></span>
     </div>
 
+    <div class="form-group">
+        <label>Image Preview</label>
+        <img src="@Url.Content(Model.ImageUrl)" alt="Product Image" class="img-thumbnail" />
+    </div>
+
     <input type="hidden" asp-for="ProductID" />
 
-    <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
+    <button type="submit" class="btn btn-primary">Save</button>
     <a asp-controller="Admin" asp-action="ManageProducts" class="btn btn-secondary">Cancel</a>
 </form>

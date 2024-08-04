@@ -32,9 +32,8 @@
                 <li>@Model.Price.ToString("C")</li>
             </ul>
             <div class="mt-3">
-                <button type="button" class="btn2" style="margin-right: 10px;">Add to Cart</button>
-
-                <button type="button" class="btn2">Buy Now</button>
+                <button type="button" class="btn2" onclick="location.href='@Url.Action("Index", "Cart", new { id = Model.ProductID })'">Add to Cart</button>
+                <button type="button" class="btn2" style="margin-left: 10px;" onclick="location.href='@Url.Action("BuyNow", "Cart", new { id = Model.ProductID })'">Buy Now</button>
             </div>
         </div>
 

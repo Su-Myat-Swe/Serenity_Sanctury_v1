@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Serenity_Sanctury_v1.ViewModels
+namespace Serenity_Sanctury_v1.Controllers
 {
-    public class LoginVM : Controller
+    public class CartController : Controller
     {
         public IActionResult Index()
         {

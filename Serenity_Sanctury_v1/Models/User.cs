@@ -1,53 +1,31 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema; //for not mapped
+using Microsoft.AspNetCore.Identity;
 
 namespace Serenity_Sanctury_v1.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        [Key]
-        public int ID { get; set; }
+        public string? LastName { get; set; }
 
-        [Required]
-        [MaxLength(50)]
-        public string LastName { get; set; }
+        public string? FirstName { get; set; }
 
-        [Required]
-        [MaxLength(50)]
-        public string FirstName { get; set; }
-
-        [Required]
         [MaxLength(100)]
-        public string FullName { get; set; }
+        public string? FullName { get; set; }
 
         [MaxLength(15)]
         public string? PhoneNo { get; set; }
 
-        [Required]
-        [EmailAddress]
-        [MaxLength(100)]
-        public string Email { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
-        [MaxLength(100)]
-        public string Password { get; set; }
-
         [DataType(DataType.Date)]
-        public DateOnly? Birthday { get; set; }
+        public DateTime? Birthday { get; set; } 
 
-        [Required]
         [MaxLength(10)]
-        public string Gender { get; set; }
+        public string? Gender { get; set; }
 
-        [ForeignKey("Address")]
-        public int? AddressID { get; set; }
+        public string? Address { get; set; }
 
-        public Address? Address { get; set; } // Nullable Address property
-
-        [Required]
-        [MaxLength(50)]
-        public string Role { get; set; }
+        [NotMapped]
+        public IList<string> RoleNames { get; set; } = new List<string>();
     }
 
 }

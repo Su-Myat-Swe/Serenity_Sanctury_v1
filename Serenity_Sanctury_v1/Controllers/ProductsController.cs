@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Serenity_Sanctury_v1.Data;
 using Serenity_Sanctury_v1.Models;
+using Serenity_Sanctury_v1.Models.DataLayer;
 
 namespace Serenity_Sanctury_v1.Controllers
 {

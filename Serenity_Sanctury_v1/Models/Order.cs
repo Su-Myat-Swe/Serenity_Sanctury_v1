@@ -10,11 +10,9 @@ namespace Serenity_Sanctury_v1.Models
         [Key]
         public int OrderID { get; set; }
 
-        [ForeignKey("User")]
-        public int CustomerID { get; set; }
+        public string CustomerID { get; set; }
 
-        [ForeignKey("Address")]
-        public int AddressID { get; set; }
+        public string Address { get; set; }
 
         [Required]
         public DateTime OrderDate { get; set; }
@@ -27,7 +25,6 @@ namespace Serenity_Sanctury_v1.Models
         public OrderStatus OrderStatus { get; set; }
 
         // Navigation properties
-        public User? User { get; set; }
-        public Address? Address { get; set; }
+        public User User { get; set; }
     }
 }

@@ -9,11 +9,9 @@ namespace Serenity_Sanctury_v1.Models
         [Key]
         public int ProductID { get; set; }
 
-        [Required]
         [StringLength(100)] // length restriction
         public string ProductName { get; set; }
 
-        [Required]
         public Category Category { get; set; }
 
         [StringLength(500)] // length restriction
@@ -28,18 +26,15 @@ namespace Serenity_Sanctury_v1.Models
         [StringLength(50)] // length restriction
         public string? Size { get; set; }
 
-        [Required]
         [StringLength(100)] // length restriction
         public string Container { get; set; }
 
-        [Required]
         [Column(TypeName = "decimal(18, 2)")] // column type for SQL Server
         public decimal Price { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal? DiscountedPrice { get; set; }
 
-        [Required]
         [Range(0, int.MaxValue, ErrorMessage = "Quantity must be a non-negative number")] //This makes sure that quantity cannot be negative
         public int Quantity { get; set; }
 

@@ -52,12 +52,12 @@
                         @inject SignInManager<User> signInManager
                         @if (signInManager.IsSignedIn(User))
                         {
-                            // signed-in user - Log Out button and username and change password link
+                           @*  // signed-in user - Log Out button and username and change password link
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Profile">
                                     Profile
                                 </a>
-                            </li>
+                            </li> *@
                             <li class="nav-item">
 
                                  <form method="post" asp-action="LogOut" asp-controller="Account"

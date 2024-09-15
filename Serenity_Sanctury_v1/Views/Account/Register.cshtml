@@ -10,46 +10,44 @@
     ViewData["Title"] = "Sign up";
 }
 
-<div class="row">
-    <div class="col-md-6 offset-3">
-        <p>
-            <h4>Sign up for a new account</h4>
-        </p>
+<body style="background-image:url('@Url.Content("~/Image/loginBg6.jpg")');background-size: cover;height:100vh;">
+    <div class="container">
+        <form asp-action="Register" class="login-form" style="padding-top:80px;">
+            <div class="mb-3 bg p-5 rounded" style="box-shadow: 1px 1px 5px 5px #8967B3;">
+                <h2 class="text-center mb-4">Create an account</h2>
 
-        @if (TempData["Error"] != null)
-        {
-            <div class="col-md-12 alert alert-danger">
-                <span><b>Sorry!</b> - @TempData["Error"] </span>
-            </div>
-        }
+                @* Display error message if present *@
+                @if (TempData["Error"] != null)
+                {
+                    <div class="col-md-12 alert alert-danger">
+                        <span><b>Sorry!</b> - @TempData["Error"]</span>
+                    </div>
+                }
 
-        <div class="row">
-            <div class="col-md-8 offset-2">
-                <form asp-action="Register">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group mt-4">
+                    <label asp-for="Email" class="control-label fw-bold"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
 
-                    <div class="form-group">
-                        <label asp-for="Email" class="control-label"></label>
-                        <input asp-for="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="Password" class="control-label"></label>
-                        <input asp-for="Password" class="form-control" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="ConfirmPassword" class="control-label"></label>
-                        <input asp-for="ConfirmPassword" class="form-control" />
-                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                    </div>
+                <div class="form-group mt-4">
+                    <label asp-for="Password" class="control-label fw-bold"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
 
-                    <div class="form-group">
-                        <input class="btn btn-outline-success float-right" type="submit" value="Sign up" />
-                        <a class="btn btn-outline-secondary" asp-controller="Race" asp-action="Index">Cancel</a>
-                    </div>
-                </form>
-            </div>
-        </div>
+                <div class="form-group mt-4">
+                    <label asp-for="ConfirmPassword" class="control-label fw-bold"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group d-flex justify-content-center mt-3">
+                    <input class="btn btn-outline-success float-right w-50 mt-3 fw-bold" type="submit" value="Sign Up" />
+                    <a class="btn btn-outline-secondary ms-4 mt-3 w-50 fw-bold" asp-controller="Race" asp-action="Index">Cancel</a>
+                </div>
+            </div> <!-- Closing tag fixed -->
+        </form>
     </div>
-</div>
+</body>

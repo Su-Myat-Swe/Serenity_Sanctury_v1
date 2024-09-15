@@ -278,4 +278,20 @@ body {
     margin-top: auto;
 }*/
 
+/*-------------------
+    Login/Register form CSS
+---------------------*/
+
+.login-form{
+    width: 33%;
+    margin: auto;
+    padding-top: 120px;
+}
+.bg {
+    background-color: #FFDFD6;
+}
+
+/*------------------
+    Footer
+--------------------*/
 

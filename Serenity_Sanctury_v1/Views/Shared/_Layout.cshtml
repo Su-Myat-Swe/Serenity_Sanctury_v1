@@ -21,15 +21,15 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between fw-bold">
                     <ul class="navbar-nav flex-grow-1 d-flex align-items-center text-center">
-                        <li class="nav-item">
+                        <li class="nav-item ms-4">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ms-4">
                             <a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Products</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ms-4">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
                         
@@ -39,6 +39,11 @@
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
+                        </li>
+
+                        @*Admin Page NavBar*@
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" asp-area="" asp-controller="Admin" asp-action="ManageProducts">Admin</a>
                         </li>
                        @*  <li class="nav-item ms-auto">
                             <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login
@@ -59,7 +64,7 @@
                                     Profile
                                 </a>
                             </li> *@
-                            <li class="nav-item">
+                            <li class="nav-item ms-auto">
 
                                  <form method="post" asp-action="LogOut" asp-controller="Account"
                                       asp-area="">
@@ -72,18 +77,20 @@
                         else
                         {
                             // anonymous user - Register link and Log In button
-                            <li class="nav-item ms-auto">
+                            <li class="nav-item ms-4">
                                 <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">
                                     Login
                                 </a>
                             </li>
+                            @*
                             <li class="nav-item">
                                 <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Register">
                                     Register
                                 </a>
                             </li>
+                            *@
                         }
-                        <li class="nav-item">
+                        <li class="nav-item ms-4 me-5">
                             <a class="nav-link" asp-area="" asp-controller="Cart" asp-action="Index">
                                 <img src="~/Image/cart1.png" alt="Cart" style="height: 45px; width: 45px;"></a>
                         </li>

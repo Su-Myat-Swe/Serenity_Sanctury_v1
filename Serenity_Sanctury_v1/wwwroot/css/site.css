@@ -36,13 +36,14 @@ body {
     background-color: #9B86BD;
     height: 55px;
     width: 100vw;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Changing some style properties of other pages in navigation bar*/
 .nav-item {
     display: grid;
     align-items: center;
+
     
 }
 
@@ -68,13 +69,13 @@ body {
 
 
 .navbar-nav .nav-link:hover {
-    color: inherit; /* or specify your desired hover color */
+    color: gainsboro; /* or specify your desired hover color */
     text-decoration: none; /* removes underline if present */
 }
 
 /*Style properties of nav link in nav bar*/
 .navbar-nav a.nav-link {
-    border-radius: 50px;
+    border-radius:50px;
 }
 
 /*Style properties of active Page in Navigation bar*/
@@ -288,10 +289,24 @@ body {
     padding-top: 120px;
 }
 .bg {
-    background-color: #FFDFD6;
+    background-color: #7776B3;
+}
+.btn-login {
+    color: white;
+    background-color: #7776B3;
 }
 
-/*------------------
-    Footer
---------------------*/
+.btn-login:hover {
+     background-color: #185519;
+     color: white;
+     border: none;
+}
+
+
+/*-------------------------------
+    Manage Products - Admin Page
+--------------------------------*/
+    .admin:hover {
+        opacity:0.7;
+    }
 

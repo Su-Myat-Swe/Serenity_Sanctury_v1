@@ -4,12 +4,12 @@
     ViewBag.Title = "Delete Product";
 }
 
-<h2>Confirm Deletion</h2>
+<h1 class="text-center text-decoration-underline mt-4 text-danger">Confirm Deletion</h1>
 <h3>@Model.ProductName</h3>
 
 <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="ProductID" />
 
-    <button type="submit" class="btn btn-primary">Delete</button>
-    <a asp-controller="Admin" asp-action="ManageProducts" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="admin p-2 text-white rounded fw-bold" style="background-color:red; text-decoration:none;width:100px;border:none; display: inline-block;">Delete</button>
+    <a asp-controller="Admin" asp-action="ManageProducts" class="admin btn-secondary p-2 text-white text-center rounded fw-bold ms-3" style="text-decoration:none;width:100px;border:none;display: inline-block;">Cancel</a>
 </form>

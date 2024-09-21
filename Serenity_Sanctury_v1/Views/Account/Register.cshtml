@@ -10,11 +10,11 @@
     ViewData["Title"] = "Sign up";
 }
 
-<body style="background-image:url('@Url.Content("~/Image/loginBg6.jpg")');background-size: cover;height:100vh;">
+<body>
     <div class="container">
         <form asp-action="Register" class="login-form" style="padding-top:80px;">
-            <div class="mb-3 bg p-5 rounded" style="box-shadow: 1px 1px 5px 5px #8967B3;">
-                <h2 class="text-center mb-4">Create an account</h2>
+            <div class="mb-3 bg p-5 rounded" style="box-shadow: 2px 2px 3px 2px darkgray;">
+                <h2 class="text-center mb-4 text-white">Create an account</h2>
 
                 @* Display error message if present *@
                 @if (TempData["Error"] != null)
@@ -26,28 +26,33 @@
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group mt-4">
-                    <label asp-for="Email" class="control-label fw-bold"></label>
+                    <label asp-for="Email" class="control-label fw-bold text-white"></label>
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mt-4">
-                    <label asp-for="Password" class="control-label fw-bold"></label>
+                    <label asp-for="Password" class="control-label fw-bold text-white"></label>
                     <input asp-for="Password" class="form-control" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mt-4">
-                    <label asp-for="ConfirmPassword" class="control-label fw-bold"></label>
+                    <label asp-for="ConfirmPassword" class="control-label fw-bold text-white"></label>
                     <input asp-for="ConfirmPassword" class="form-control" />
                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                 </div>
 
                 <div class="form-group d-flex justify-content-center mt-3">
-                    <input class="btn btn-outline-success float-right w-50 mt-3 fw-bold" type="submit" value="Sign Up" />
-                    <a class="btn btn-outline-secondary ms-4 mt-3 w-50 fw-bold" asp-controller="Race" asp-action="Index">Cancel</a>
+                    <input class="btn-login float-right w-50 mt-3 fw-bold rounded border" type="submit" value="Sign Up" />
+                    <a class="btn btn-outline-secondary ms-4 mt-3 w-50 fw-bold text-white border" asp-controller="Home" asp-action="Index">Cancel</a>
                 </div>
-            </div> <!-- Closing tag fixed -->
+
+                <div class="form-group mt-4 d-flex justify-content-center">
+                    <p class="text-center text-white">Already have an account? --></p>
+                    <a class="text-white fw-bold ms-1" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                </div>
+            </div> 
         </form>
     </div>
 </body>

@@ -4,8 +4,8 @@
 @{
     ViewBag.Title = "Manage Products";
 }
-<h2>Product List</h2>
-<a asp-controller="Admin" asp-action="Add">Add New Product</a>
+<h1 class="text-center text-decoration-underline mt-4">Product List</h1>
+<a class="admin p-2 text-white rounded fw-bold mt-4 mb-4 text-center" style="background-color:forestgreen; text-decoration:none;width:200px; display:inline-block;" asp-controller="Admin" asp-action="Add">Add New Product</a>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
@@ -42,9 +42,11 @@
                         <span>No Image</span>
                     }
                 </td>
-                <td>
-                    <a asp-controller="Admin" asp-action="Edit" asp-route-id="@product.ProductID">Edit</a>
-                    <a asp-controller="Admin" asp-action="Delete" asp-route-id="@product.ProductID">Delete</a>
+                <td class="text-center align-middle">
+                    <a class="admin p-2 text-white rounded fw-bold" style="background-color:#7776B3; text-decoration:none;width:70px; display:inline-block;" asp-controller="Admin" asp-action="Edit" asp-route-id="@product.ProductID">Edit</a>
+                    </td>
+                <td class="text-center align-middle">
+                    <a class="admin p-2 text-white rounded fw-bold" style="background-color:red; text-decoration:none;width:70px; display:inline-block;" asp-controller="Admin" asp-action="Delete" asp-route-id="@product.ProductID">Delete</a>
                 </td>
             </tr>
         }

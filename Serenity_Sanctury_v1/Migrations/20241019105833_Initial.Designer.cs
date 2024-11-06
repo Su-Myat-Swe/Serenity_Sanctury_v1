@@ -12,7 +12,7 @@ using Serenity_Sanctury_v1.Models.DataLayer;
 namespace Serenity_Sanctury_v1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240803211806_Initial")]
+    [Migration("20241019105833_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace Serenity_Sanctury_v1.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.7")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -198,7 +198,7 @@ namespace Serenity_Sanctury_v1.Migrations
                             OrderID = 1,
                             Address = "221 Ring Road, Callaghan, NSW, 2308, Australia",
                             CustomerID = "1",
-                            OrderDate = new DateTime(2024, 8, 4, 5, 18, 5, 267, DateTimeKind.Local).AddTicks(6175),
+                            OrderDate = new DateTime(2024, 10, 19, 18, 58, 33, 467, DateTimeKind.Local).AddTicks(3889),
                             OrderStatus = 0,
                             TotalPrice = 35.98m
                         });
@@ -245,7 +245,7 @@ namespace Serenity_Sanctury_v1.Migrations
                             OrderID = 1,
                             PostalCode = "2308",
                             StatusUpdate = "Order placed",
-                            UpdateTime = new DateTime(2024, 8, 3, 21, 18, 5, 267, DateTimeKind.Utc).AddTicks(6256)
+                            UpdateTime = new DateTime(2024, 10, 19, 10, 58, 33, 467, DateTimeKind.Utc).AddTicks(3959)
                         });
                 });
 

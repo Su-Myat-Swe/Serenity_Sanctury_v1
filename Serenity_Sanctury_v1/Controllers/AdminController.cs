@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Serenity_Sanctury_v1.Models;
 using Serenity_Sanctury_v1.Models.DataLayer;
 
 namespace Serenity_Sanctury_v1.Controllers
 {
+    [Authorize(Roles = "Admin")] 
     public class AdminController : Controller
     {
         private readonly ILogger<AdminController> _logger;

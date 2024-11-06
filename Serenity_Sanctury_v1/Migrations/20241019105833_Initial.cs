@@ -237,7 +237,7 @@ namespace Serenity_Sanctury_v1.Migrations
             migrationBuilder.InsertData(
                 table: "Orders",
                 columns: new[] { "OrderID", "Address", "CustomerID", "OrderDate", "OrderStatus", "TotalPrice", "UserId" },
-                values: new object[] { 1, "221 Ring Road, Callaghan, NSW, 2308, Australia", "1", new DateTime(2024, 8, 4, 5, 18, 5, 267, DateTimeKind.Local).AddTicks(6175), 0, 35.98m, null });
+                values: new object[] { 1, "221 Ring Road, Callaghan, NSW, 2308, Australia", "1", new DateTime(2024, 10, 19, 18, 58, 33, 467, DateTimeKind.Local).AddTicks(3889), 0, 35.98m, null });
 
             migrationBuilder.InsertData(
                 table: "Products",
@@ -261,7 +261,7 @@ namespace Serenity_Sanctury_v1.Migrations
             migrationBuilder.InsertData(
                 table: "OrderTrackings",
                 columns: new[] { "TrackingID", "OrderEmail", "OrderID", "PostalCode", "StatusUpdate", "UpdateTime" },
-                values: new object[] { 1, "customer@example.com", 1, "2308", "Order placed", new DateTime(2024, 8, 3, 21, 18, 5, 267, DateTimeKind.Utc).AddTicks(6256) });
+                values: new object[] { 1, "customer@example.com", 1, "2308", "Order placed", new DateTime(2024, 10, 19, 10, 58, 33, 467, DateTimeKind.Utc).AddTicks(3959) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

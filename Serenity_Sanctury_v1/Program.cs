@@ -42,8 +42,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 
 //////seed data for identity user
 var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
